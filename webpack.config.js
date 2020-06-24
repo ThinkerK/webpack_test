@@ -33,7 +33,9 @@ module.exports = {
 			
 		]
 	},
+	// 开发环境 source-map 控制台直接看到源码 方便 debug 
 	devtool: 'cheap-module-eval-source-map',
+	// 开发环境 服务
 	devServer:{
 		port: 8080,
 		publicPath: '/',
@@ -44,9 +46,12 @@ module.exports = {
 		},
 	},
 	plugins: [
+		// css 单独拎出 
 		// new ExtractTextPlugin({
 		// 	filename: `css/[name].[chunkhash:8].css`,
 		// }),
+		
+		// html 自动更改引用路径
 		new HtmlWebpackPlugin({
 			filename: 'index.html',
 			template: 'index.html',
