@@ -10,6 +10,7 @@ module.exports = {
 	},
 	module: {
 		rules: [
+			//es6 语法转换;
 			{
 				test: /\.js$/,
 				loader: 'babel-loader',
